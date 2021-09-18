@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../../includes/header.ejs %>
+  </head>
+
+  <style>
+    #content ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    #content ul li {
+      min-width: 300px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2em;
+    }
+    #content input {
+      margin-right: 2em;
+      color: black;
+    }
+  </style>
+
+  <body>
+    <% include ../../includes/nav.ejs %>
+    <div id="content" class="jumbotron text-center">
+      <div class="container">
+        <h1><%= title %></h1>
+        <p>Here is your list of books that you can edit:</p>
+        <ul>
+          <% for(const [i, book] of books.entries()) { %>
+          <li>
+            <span><%= `${book.author}, ${book.title} (${book.pageCount} pages)` %></span>
+            <a href="/prove02/books/delete/<%= i %>">
+              <button class="btn btn-primary">Delete</button>
+            </a>
+          </li>
+          <% } %>
+        </ul>
+        <a href="/prove02/addProduct">
+          <button class="btn btn-success" type="submit">Add Book</button>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

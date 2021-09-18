@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../../includes/header.ejs %>
+  </head>
+
+  <style>
+    #content form {
+      display: flex;
+      flex-direction: column;
+      max-width: 200px;
+      align-items: center;
+      margin: 0 auto;
+    }
+    #content form button {
+      margin-top: 2em;
+    }
+    #content form label {
+      text-align: start;
+      width: 100%;
+    }
+    #content input {
+      color: black;
+      width: 100%;
+      margin-bottom: 1em;
+    }
+  </style>
+
+  <body>
+    <% include ../../includes/nav.ejs %>
+    <div class="jumbotron text-center">
+      <div id="content" class="container">
+        <h1><%= title %></h1>
+        <p>Here is where you can add a book:</p>
+        <form action="./books/add" method="POST">
+          <label for="author">Author:</label>
+          <input type="text" name="author" />
+          <label for="title">Title:</label>
+          <input type="text" name="title" />
+          <label for="pageCount">Page Count:</label>
+          <input type="number" name="pageCount" />
+          <button class="btn btn-success" type="submit">Add Book</button>
+        </form>
+        <br />
+        <br />
+        <a href="/prove02">
+          <button class="btn btn-warning">Back</button>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
