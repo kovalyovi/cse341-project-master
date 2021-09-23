@@ -1,0 +1,122 @@
+[
+  {
+    "tags": ["Trees"],
+    "name": "ice cream stick",
+    "price": 10.99,
+    "description": "et adipisci explicabo consequatur rerum voluptas dolorem qui omnis vel"
+  },
+  {
+    "tags": ["Beach", "Ocean", "Water"],
+    "name": "stockings",
+    "price": 20.99,
+    "description": "ut architecto est similique sit nostrum sit sed ipsa itaque aliquam nesciunt reprehenderit et neque aut id nulla dolore sed sit facere eligendi"
+  },
+  {
+    "tags": ["Animal", "Bear"],
+    "name": "face wash",
+    "price": 11.99,
+    "description": "magnam maxime nostrum minima dolores repellat laborum pariatur et quia maiores quidem eos quod est voluptas voluptatem quia ipsum odit dolorem et blanditiis aut voluptates"
+  },
+  {
+    "tags": ["Road"],
+    "name": "stick",
+    "price": 13.99,
+    "description": "sunt id omnis nihil consectetur et porro ut molestias ab et rem quia omnis voluptatem est libero reiciendis voluptatem dolores excepturi"
+  },
+  {
+    "tags": ["Ocean", "Rocks"],
+    "name": "radio",
+    "price": 5.99,
+    "description": "libero reprehenderit blanditiis quidem laborum ullam quae fuga consequuntur minima praesentium consequatur qui excepturi nostrum tempora sunt deleniti"
+  },
+  {
+    "tags": ["Sunset", "Beach", "Ocean"],
+    "name": "shark",
+    "price": 6.99,
+    "description": "sunt id omnis nihil consectetur et porro ut molestias ab et rem quia omnis voluptatem est libero reiciendis voluptatem dolores excepturi"
+  },
+  {
+    "tags": ["Rust", "Old", "Car"],
+    "name": "bag of rubber bands",
+    "price": 7.99,
+    "description": "vitae mollitia et in accusantium est voluptas officiis est non"
+  },
+  {
+    "tags": ["Coffee"],
+    "name": "buckle",
+    "price": 6.99,
+    "description": "necessitatibus suscipit iure quia voluptates voluptas quidem ipsum laboriosam adipisci"
+  },
+  {
+    "tags": ["Trees", "Fog", "People"],
+    "name": "squirrel",
+    "price": 15.99,
+    "description": "totam at veritatis eligendi assumenda ex quia praesentium quibusdam ducimus"
+  },
+  {
+    "tags": ["Sunset", "Ocean", "Dock"],
+    "name": "clothes",
+    "price": 14.99,
+    "description": "et adipisci explicabo consequatur rerum voluptas dolorem qui omnis vel"
+  },
+  {
+    "tags": ["Person", "Hills", "Animals", "Sheep"],
+    "name": "sticker book",
+    "price": 22.99,
+    "description": "ut architecto est similique sit nostrum sit sed ipsa itaque aliquam nesciunt reprehenderit et neque aut id nulla dolore sed sit facere eligendi"
+  },
+  {
+    "tags": ["Beach", "Ocean", "Water"],
+    "name": "spool of wire",
+    "price": 6.99,
+    "description": "enim corporis voluptatibus laudantium possimus alias dolorem voluptatem similique aut aliquam voluptatem voluptatem omnis id consequatur"
+  },
+  {
+    "tags": ["Road"],
+    "name": "rhino",
+    "price": 66.99,
+    "description": "libero reprehenderit blanditiis quidem laborum ullam quae fuga consequuntur minima praesentium consequatur qui excepturi nostrum tempora sunt deleniti"
+  },
+  {
+    "tags": ["Trees", "Fog", "People"],
+    "name": "hair brush",
+    "price": 0.99,
+    "description": "ut architecto est similique sit nostrum sit sed ipsa itaque aliquam nesciunt reprehenderit et neque aut id nulla dolore sed sit facere eligendi"
+  },
+  {
+    "tags": ["Sunset", "Ocean", "Dock"],
+    "name": "speakers",
+    "price": 3.99,
+    "description": "totam at veritatis eligendi assumenda ex quia praesentium quibusdam ducimus"
+  },
+  {
+    "tags": ["Person", "Hills", "Animals", "Sheep"],
+    "name": "chicken",
+    "price": 30.99,
+    "description": "enim corporis voluptatibus laudantium possimus alias dolorem voluptatem similique aut aliquam voluptatem voluptatem omnis id consequatur"
+  },
+  {
+    "tags": ["Sunset", "Ocean", "Dock"],
+    "name": "handbasket",
+    "price": 13.99,
+    "description": "libero reprehenderit blanditiis quidem laborum ullam quae fuga consequuntur minima praesentium consequatur qui excepturi nostrum tempora sunt deleniti"
+  },
+  {
+    "tags": ["Rust", "Old", "Car"],
+    "name": "clothes pin",
+    "price": 16.99,
+    "description": "totam at veritatis eligendi assumenda ex quia praesentium quibusdam ducimus"
+  },
+  {
+    "tags": ["Sunset", "Ocean", "Dock"],
+    "name": "hair pin",
+    "price": 7.99,
+    "description": "sunt id omnis nihil consectetur et porro ut molestias ab et rem quia omnis voluptatem est libero reiciendis voluptatem dolores excepturi"
+  },
+  {
+    "tags": ["Road"],
+    "name": "flowers",
+    "price": 8.99,
+    "description": "enim corporis voluptatibus laudantium possimus alias dolorem voluptatem similique aut aliquam voluptatem voluptatem omnis id consequatur"
+  }
+]

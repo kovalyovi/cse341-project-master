@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../../includes/header.ejs %>
+    <link rel="stylesheet" href="/stylesheets/ta03.css" />
+  </head>
+
+  <body>
+    <% include ../../includes/nav.ejs %>
+    <div class="jumbotron text-center">
+      <div class="container">
+        <h1><%= title %></h1>
+      </div>
+    </div>
+    <div class="container">
+      <div>
+        <a href="/prove03/" class="btn btn-primary">See Products</a>
+      </div>
+      <% if (users.length> 0) { %>
+      <h2>Users</h2>
+      <div class="user-container">
+        <% for (user of users) { %>
+        <div class="user">
+          <div>
+            <h3><%= user.firstName %> <%= user.lastName %></h3>
+          </div>
+          <div>
+            <p><%= user.about %></p>
+          </div>
+        </div>
+        <% } %>
+      </div>
+      <% } else { %>
+      <h2>No Users Found!</h2>
+      <% } %>
+    </div>
+  </body>
+</html>
