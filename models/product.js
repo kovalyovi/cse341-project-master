@@ -4,7 +4,7 @@ const fetch = require("node-fetch");
 // const fs = require("fs");
 
 const productsUrl = "https://byui-cse.github.io/cse341-course/lesson03/items.json";
-const prove03ProductsUrl = "https://byui-cse.github.io/cse341-course/lesson03/items.json";
+const prove03ProductsUrl = "https://raw.githubusercontent.com/kovalyovi/cse341-project-master/730411aecff8418e2911529ea4df28ab83aa5951/data/products.json";
 
 const urlsToFetch = {
   ta03: productsUrl,

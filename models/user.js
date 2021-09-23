@@ -2,7 +2,7 @@
 
 const fetch = require("node-fetch");
 
-const usersUrl = "https://byui-cse.github.io/cse341-course/lesson03/items.json";
+const usersUrl = "https://raw.githubusercontent.com/kovalyovi/cse341-project-master/master/data/users.json";
 
 module.exports = class User {
   static fetchAll(cb) {
