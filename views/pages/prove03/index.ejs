@@ -2,7 +2,21 @@
 <html>
   <head>
     <% include ../../includes/header.ejs %>
-    <link rel="stylesheet" href="/stylesheets/ta03.css" />
+    <link rel="stylesheet" href="/stylesheets/main.css" />
+    <style>
+      .product {
+        cursor: pointer;
+        border: 1px solid transparent;
+        transition: all 0.12s ease-in-out;
+      }
+      .product:hover {
+        border-color: black;
+      }
+      .product-container a {
+        text-decoration: none;
+        color: #333;
+      }
+    </style>
   </head>
 
   <body>
@@ -26,16 +40,18 @@
         <% } %>
       </form>
       <div class="product-container">
-        <% for (product of products) { %>
-        <div class="product">
-          <div>
-            <h3><%= product.name %> - $<%= product.price %></h3>
+        <% for (const [i, product] of products.entries()) { %>
+        <a href="/prove03/product/<%= i %>">
+          <div class="product">
+            <div>
+              <h3><%= product.name %> - $<%= product.price %></h3>
+            </div>
+            <div>
+              <p><%= product.description %></p>
+              <p>Tags: <%= product.tags.join(", ") %></p>
+            </div>
           </div>
-          <div>
-            <p><%= product.description %></p>
-            <p>Tags: <%= product.tags.join(", ") %></p>
-          </div>
-        </div>
+        </a>
         <% } %>
       </div>
       <% } else { %>

@@ -14,6 +14,18 @@ exports.getProducts = (req, res, next) => {
   }, "prove03");
 };
 
+// handle prove03/product/:id
+exports.getProduct = (req, res, next) => {
+  const productIndex = req.params.productIndex;
+  Product.fetchAll((products) => {
+    res.render("pages/prove03/product", {
+      title: "Prove 03",
+      path: "/prove03/individual",
+      product: products[productIndex],
+    });
+  }, "prove03");
+};
+
 // handle prove03/
 exports.getUsers = (req, res, next) => {
   User.fetchAll((users) => {

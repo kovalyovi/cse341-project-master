@@ -4,6 +4,7 @@ const router = express.Router();
 const prove03Controller = require("../../controllers/prove/prove03.js");
 
 router.get("/", prove03Controller.getProducts);
+router.get("/product/:productIndex", prove03Controller.getProduct);
 router.get("/users", prove03Controller.getUsers);
 router.get("/search", prove03Controller.getSearchProducts);
 
