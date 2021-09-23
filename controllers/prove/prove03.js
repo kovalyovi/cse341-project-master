@@ -1,7 +1,7 @@
 // Prove03 controller
 
 const Product = require("../../models/product.js");
-const User = require("../../models/User.js");
+const User = require("../../models/user.js");
 
 // handle prove03/
 exports.getProducts = (req, res, next) => {
