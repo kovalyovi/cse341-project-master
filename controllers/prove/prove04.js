@@ -12,8 +12,8 @@ exports.getProducts = async (req, res, next) => {
   res.render("pages/prove04", {
     title: "Prove 04",
     path: "/prove04",
-    products: products,
-    cartItems: cartData,
+    products: products ?? [],
+    cartItems: cartData ?? [],
   });
 };
 
