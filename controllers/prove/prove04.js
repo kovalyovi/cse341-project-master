@@ -5,16 +5,15 @@ const ProductModel = require("../../models/db/product.js");
 const UserModel = require("../../models/db/user.js");
 
 // handle prove04/
-exports.getProducts = async (req, res, next) => {
-  const products = await Product.getAll();
-  const cartData = await ProductModel.find({});
-
+exports.getProducts = (req, res, next) => {
   res.render("pages/prove04", {
     title: "Prove 04",
     path: "/prove04",
-    products: products,
-    cartItems: cartData,
+    products: [],
+    cartItems: [],
   });
+
+  return;
 };
 
 // handle prove04/product/:id
