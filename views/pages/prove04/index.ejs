@@ -7,5 +7,18 @@
 
   <body>
     <% include ../../includes/nav.ejs %>
+    <div class="jumbotron text-center">
+      <div class="container">
+        <h1><%= title %></h1>
+      </div>
+    </div>
+    <div class="container">
+      <div>
+        <a href="/prove04/users" class="btn btn-primary">See Users</a>
+        <% if (cartItems?.length) { %>
+        <a href="/prove04/cart-items" class="btn btn-success">See Cart Items (<%= cartItems.length %>)</a>
+        <% } %>
+      </div>
+    </div>
   </body>
 </html>
