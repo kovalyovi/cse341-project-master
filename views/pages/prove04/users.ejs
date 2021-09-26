@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../../includes/header.ejs %>
+    <link rel="stylesheet" href="/stylesheets/ta03.css" />
+  </head>
+
+  <style>
+    .user {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      transition: all 0.12s ease-in-out;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      padding: 0 1rem;
+      margin-bottom: 2rem;
+    }
+    .user:hover {
+      border-color: #333;
+    }
+    .user:hover .controls {
+      visibility: visible;
+      opacity: 1;
+    }
+    .user .controls {
+      visibility: hidden;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      transition: all 0.12s ease-in-out;
+    }
+    .user .controls > * {
+      margin-left: 1.4rem;
+    }
+    .user .info {
+      width: 200px;
+    }
+  </style>
+
+  <body>
+    <% include ../../includes/nav.ejs %>
+    <div class="jumbotron text-center">
+      <div class="container">
+        <h1><%= title %></h1>
+      </div>
+    </div>
+    <div class="container">
+      <div>
+        <a href="/prove04/" class="btn btn-primary">See Products</a>
+      </div>
+      <br />
+      <div>
+        <a href="/prove04/users/add" class="btn btn-success">Add User</a>
+      </div>
+      <% if (users.length> 0) { %>
+      <h2>Users</h2>
+      <div class="user-container">
+        <% for (const user of users) { %>
+        <div class="user">
+          <div class="info">
+            <div>
+              <h3><%= user.firstName %> <%= user.lastName %></h3>
+            </div>
+            <div>
+              <p><%= user.about %></p>
+            </div>
+          </div>
+          <div class="controls">
+            <div>
+              <a href="./users/edit/<%= user._id %>" class="btn btn-warning">Edit</a>
+            </div>
+            <form action="./users/delete" method="POST">
+              <div>
+                <input type="hidden" id="userId" name="userId" value="<%= user._id %>" />
+                <button class="btn btn-danger" type="submit">Delete</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <% } %>
+      </div>
+      <% } else { %>
+      <h2>No Users Found!</h2>
+      <% } %>
+    </div>
+  </body>
+</html>

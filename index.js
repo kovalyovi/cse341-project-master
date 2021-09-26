@@ -1,6 +1,7 @@
 // Our initial setup (package requires, port number setup)
 const express = require("express");
-const bodyParser = require("body-parser");
+const cors = require("cors");
+const mongoose = require("mongoose");
 const path = require("path");
 const PORT = process.env.PORT || 3000;
 
@@ -14,11 +15,19 @@ const ta04Routes = require("./routes/ta04");
 
 const prove02Routes = require("./routes/prove/prove02");
 const prove03Routes = require("./routes/prove/prove03");
+const prove04Routes = require("./routes/prove/prove04");
+
+// CORS setup
+const corsOptions = {
+  origin: "https://cse-361-kovalyovi.herokuapp.com/",
+  optionsSuccessStatus: 200,
+};
 
 app
   .use(express.static(path.join(__dirname, "public")))
   .set("views", path.join(__dirname, "views"))
   .set("view engine", "ejs")
+  .use(cors(corsOptions))
   // For view engine as Pug
   //.set('view engine', 'pug') // For view engine as PUG.
   // For view engine as hbs (Handlebars)
@@ -32,6 +41,7 @@ app
   .use("/ta04", ta04Routes)
   .use("/prove02/", prove02Routes)
   .use("/prove03/", prove03Routes)
+  .use("/prove04/", prove04Routes)
   .get("/", (req, res, next) => {
     // This is the primary index, always handled last.
     res.render("pages/index", {
@@ -42,5 +52,31 @@ app
   .use((req, res, next) => {
     // 404 page
     res.render("pages/404", { title: "404 - Page Not Found", path: req.url });
+  });
+// .listen(PORT, () => console.log(`Listening on ${PORT}`));
+
+const options = {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+  family: 4,
+};
+
+const MONGODB_URL =
+  process.env.MONGODB_URL ||
+  "mongodb+srv://ilya:BkmzRjdfktd301194@cluster0.lyjub.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+
+mongoose
+  .connect(MONGODB_URL, options)
+  .then((result) => {
+    app.listen(PORT);
   })
-  .listen(PORT, () => console.log(`Listening on ${PORT}`));
+  .catch((err) => {
+    console.log("MONGOOSE ERROR");
+    console.log(err);
+  });
+
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error: "));
+db.once("open", function () {
+  console.log("Connected successfully");
+});

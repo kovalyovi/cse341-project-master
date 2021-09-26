@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../../includes/header.ejs %>
+  </head>
+
+  <style>
+    #content form {
+      display: flex;
+      flex-direction: column;
+      max-width: 200px;
+      align-items: center;
+      margin: 0 auto;
+    }
+    #content form button {
+      margin-top: 2em;
+    }
+    #content form label {
+      text-align: start;
+      width: 100%;
+    }
+    #content input,
+    #content textarea {
+      color: black;
+      width: 100%;
+      margin-bottom: 1em;
+    }
+  </style>
+
+  <body>
+    <% include ../../includes/nav.ejs %>
+    <div class="jumbotron text-center">
+      <div id="content" class="container">
+        <h1><%= title %></h1>
+        <p>Here is where you can edit a user:</p>
+        <form action="/prove04/users/update" method="POST">
+          <input type="hidden" id="userId" name="userId" value="<%= user._id %>" />
+          <label for="firstName">First Name:</label>
+          <input type="text" name="firstName" value="<%= user.firstName %>" />
+          <label for="lastName">Last Name:</label>
+          <input type="text" name="lastName" value="<%= user.lastName %>" />
+          <label for="about">About:</label>
+          <textarea type="text" name="about"><%= user.about %></textarea>
+          <button class="btn btn-warning" type="submit">Update User</button>
+        </form>
+        <br />
+        <br />
+        <a href="/prove04/">
+          <button class="btn btn-warning">Back</button>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

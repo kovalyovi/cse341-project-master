@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../../includes/header.ejs %>
+    <link rel="stylesheet" href="/stylesheets/ta03.css" />
+  </head>
+
+  <body>
+    <% include ../../includes/nav.ejs %>
+    <div class="jumbotron text-center">
+      <div class="container">
+        <h1><%= title %></h1>
+      </div>
+    </div>
+    <div class="container">
+      <div>
+        <a href="/prove04/" class="btn btn-primary">Back</a>
+      </div>
+      <h2>Individual Product</h2>
+      <div class="product-container">
+        <div class="product">
+          <div>
+            <h3><%= product.name %> - $<%= product.price %></h3>
+          </div>
+          <div>
+            <p><%= product.description %></p>
+            <p>Tags: <%= product.tags.join(", ") %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
