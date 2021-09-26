@@ -1,7 +1,6 @@
 // Prove04 controller
 
 const Product = require("../../models/product.js");
-const User = require("../../models/user.js");
 const ProductModel = require("../../models/db/product.js");
 const UserModel = require("../../models/db/user.js");
 
